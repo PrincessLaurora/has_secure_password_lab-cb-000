@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     @user = User.create(user_params)
     if @user.save
     else
-    redirect_to(controller: 'users', action: 'new')
+      redirect_to(controller: 'users', action: 'new')
     end
   end
 
