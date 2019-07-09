@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   end
 
   def new
-    @user = User.new
+    @user = session[:name]
   end
 
   def create
