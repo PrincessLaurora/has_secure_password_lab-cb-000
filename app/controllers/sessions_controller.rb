@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     user = User.find_by(name: params[:name])
     authenticated = user.try(:authenticate, params[:password])
     return head(:forbidden) unless authenticated
-    @user = user
+    user = @user
     session[:user_id] = @user.id
   end
 end
