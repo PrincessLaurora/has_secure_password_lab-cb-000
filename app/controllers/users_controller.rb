@@ -12,6 +12,7 @@ class UsersController < ApplicationController
     if @user.save
     else
     redirect_to(controller: 'users', action: 'new')
+    end
   end
 
   private
