@@ -1,15 +1,15 @@
 class UsersController < ApplicationController
 
   def home
-    redirect_to controller: 'sessions', action: 'new' unless session[:name]
+    redirect_to controller: 'users', action: 'new' unless session[:name]
   end
 
   def new
-    @user = session[:name]
   end
 
   def create
     User.create(user_params)
+    if 
   end
 
   private
