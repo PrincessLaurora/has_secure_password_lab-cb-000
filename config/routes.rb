@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
-
-  resources :users, only: [:home, :new, :create]
   root 'users#home'
+  resources :users, only: [:new, :create]
+  
 
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
